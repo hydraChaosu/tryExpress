@@ -11,5 +11,6 @@ app.get("/", function(req, res) {
   res.render("index", { title: "Hey", message: "Hello there!" });
 });
 app.use("/test", main);
+app.use(express.static("public"));
 
 app.listen(port, () => console.log(`Example app listening on port ${port}!`));
